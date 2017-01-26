@@ -6,7 +6,7 @@ ReadFile::ReadFile(const char* file_name)
 {
    input_file.open(file_name);
    closed = false;
-   eof = false;
+   _eof = false;
 }
 
 ReadFile::~ReadFile()
@@ -34,7 +34,7 @@ String* ReadFile::readLine(ReadFile* rf)
    if (_eof) return NULL;
 
    string text;
-   eof = !(getline(input_file, text));
+   _eof = !(getline(input_file, text));
 
    String* str = new String((const char*) text.c_str());
    return str;
