@@ -4,18 +4,14 @@
 
 ReadFile::ReadFile(const char* file_name)
 {
-   ReadFile* rf = new ReadFile;
-
    input_file.open(file_name);
    closed = false;
    eof = false;
-   return rf;
 }
 
 ReadFile::~ReadFile()
 {
    close(rf);
-   delete rf;
 }
 
 bool ReadFile::eof()
