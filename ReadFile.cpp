@@ -20,7 +20,7 @@ ReadFile::~ReadFile()
 
 bool ReadFile::eof()
 {
-   return eof;
+   return _eof;
 }
 
 void ReadFile::close()
