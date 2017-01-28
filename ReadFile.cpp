@@ -11,7 +11,7 @@ ReadFile::ReadFile(const char* file_name)
 
 ReadFile::~ReadFile()
 {
-   close(rf);
+   close();
 }
 
 bool ReadFile::eof()
@@ -28,7 +28,7 @@ void ReadFile::close()
    }
 }
 
-String* ReadFile::readLine(ReadFile* rf)
+String* ReadFile::readLine()
 {
    if (closed) return NULL;
    if (_eof) return NULL;
